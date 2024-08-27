@@ -1,0 +1,179 @@
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #9cacc5ec;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.header {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Input */
+input[type='text'] {
+  width: calc(100% - 120px);
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1em;
+  margin-right: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type='text']:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Add Button */
+.addToDo {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addToDo:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* List Heading */
+.list-heading {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Todo Container */
+.todoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 2px solid #ccc;
+}
+
+.todoContainer:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+/* List Data */
+.listData {
+  flex: 1;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Remove Button */
+.removeButton {
+  margin-left: 12px;
+}
+
+.removeButton button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.removeButton button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+
+/* Remove All Button */
+.removeAll {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.removeAll:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.2em;
+  }
+  .container {
+    margin: 10px;
+      padding: 15px;
+  }
+
+  input[type='text'] {
+      width: calc(100% - 120px);
+      margin-right: 3px;
+  }
+
+  .list-heading{
+    text-align: center;
+  }
+
+
+
+  .removeButton {
+      margin-left: 0;
+      margin-top: 10px;
+  }
+  .list-heading{
+    font-size: 0.8em;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
